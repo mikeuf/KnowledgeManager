@@ -25,8 +25,6 @@ public class FXMLDocumentController implements Initializable {
 	@FXML
 	private Label label;
 	@FXML
-	private Button button;
-	@FXML
 	private HTMLEditor htmlFieldProblem;
 	@FXML
 	private TextField textFieldArticleId;
@@ -34,9 +32,13 @@ public class FXMLDocumentController implements Initializable {
 	private TextField textFieldTitle;
 	@FXML
 	private HTMLEditor htmlFieldSolution;
-	
 	@FXML
-	private void handleButtonAction(ActionEvent event) {
+	private Button btnLoad;
+	@FXML
+	private Button btnSave;
+
+	@FXML
+	private void handleBtnLoadAction(ActionEvent event) {
 		System.out.println("You clicked me!");
 		label.setText("Hello World!");
 		int articleId = Integer.parseInt(textFieldArticleId.getText());
@@ -57,6 +59,11 @@ public class FXMLDocumentController implements Initializable {
 				list.forEach(System.out::println);
 	}
 	
+	@FXML
+	private void handleBtnSaveAction(ActionEvent event) {
+		System.out.println("You clicked Save!");
+	}
+	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		// TODO
@@ -72,6 +79,10 @@ public class FXMLDocumentController implements Initializable {
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.businessMethod(arg0);
 	}
+
+
+
+	
 
 
 
