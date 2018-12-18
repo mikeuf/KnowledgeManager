@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.web.HTMLEditor;
 
 /**
  *
@@ -27,6 +28,8 @@ public class FXMLDocumentController implements Initializable {
 	private Button button;
 	@FXML
 	private TextField fieldArticleId;
+	@FXML
+	private HTMLEditor htmlFieldProblem;
 	
 	@FXML
 	private void handleButtonAction(ActionEvent event) {
@@ -35,6 +38,12 @@ public class FXMLDocumentController implements Initializable {
 		int articleId = Integer.parseInt(fieldArticleId.getText());
 		
 				List list = businessMethod(articleId);
+				StringBuilder problem = new StringBuilder();
+				problem.append(list.get(0));
+		//		String problem = list.get(2);   //Integer.toString((int) list.get(2));
+				
+				htmlFieldProblem.setHtmlText(problem.toString());
+				
 				list.forEach(System.out::println);
 	}
 	
@@ -48,12 +57,12 @@ public class FXMLDocumentController implements Initializable {
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.hello(name);
 	}
-
-	private static java.util.List<java.lang.Object> businessMethod(int arg0) {
+	private static java.util.List<java.lang.String> businessMethod(int arg0) {
 		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.businessMethod(arg0);
 	}
+
 
 
 	

@@ -44,14 +44,14 @@ public interface DbInterface {
      * 
      * @param arg0
      * @return
-     *     returns java.util.List<java.lang.Object>
+     *     returns java.util.List<java.lang.String>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "businessMethod", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethod")
     @ResponseWrapper(localName = "businessMethodResponse", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethodResponse")
     @Action(input = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodRequest", output = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodResponse")
-    public List<Object> businessMethod(
+    public List<String> businessMethod(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
 

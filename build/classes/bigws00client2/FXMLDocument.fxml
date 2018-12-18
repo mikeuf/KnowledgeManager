@@ -10,7 +10,7 @@
     <children>
         <Button fx:id="button" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="Submit" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="333.0" layoutY="71.0" prefHeight="200.0" prefWidth="506.0" />
+      <HTMLEditor fx:id="htmlFieldProblem" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="333.0" layoutY="71.0" prefHeight="200.0" prefWidth="506.0" />
       <TextField fx:id="fieldArticleId" layoutX="80.0" layoutY="44.0" />
     </children>
 </AnchorPane>
