@@ -38,11 +38,13 @@ public class FXMLDocumentController implements Initializable {
 		int articleId = Integer.parseInt(fieldArticleId.getText());
 		
 				List list = businessMethod(articleId);
-				StringBuilder problem = new StringBuilder();
-				problem.append(list.get(0));
+				String problem = (String) list.get(1);
+				
+			//	StringBuilder problem = new StringBuilder();
+			//	problem.append(list.get(0));
 		//		String problem = list.get(2);   //Integer.toString((int) list.get(2));
 				
-				htmlFieldProblem.setHtmlText(problem.toString());
+				htmlFieldProblem.setHtmlText(problem);
 				
 				list.forEach(System.out::println);
 	}
