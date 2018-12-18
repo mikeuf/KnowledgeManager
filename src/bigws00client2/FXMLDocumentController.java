@@ -27,25 +27,33 @@ public class FXMLDocumentController implements Initializable {
 	@FXML
 	private Button button;
 	@FXML
-	private TextField fieldArticleId;
-	@FXML
 	private HTMLEditor htmlFieldProblem;
+	@FXML
+	private TextField textFieldArticleId;
+	@FXML
+	private TextField textFieldTitle;
+	@FXML
+	private HTMLEditor htmlFieldSolution;
 	
 	@FXML
 	private void handleButtonAction(ActionEvent event) {
 		System.out.println("You clicked me!");
 		label.setText("Hello World!");
-		int articleId = Integer.parseInt(fieldArticleId.getText());
+		int articleId = Integer.parseInt(textFieldArticleId.getText());
 		
 				List list = businessMethod(articleId);
-				String problem = (String) list.get(1);
+				String title = (String) list.get(1);
+				String problem = (String) list.get(2);
+					String solution = (String) list.get(3);
 				
 			//	StringBuilder problem = new StringBuilder();
 			//	problem.append(list.get(0));
 		//		String problem = list.get(2);   //Integer.toString((int) list.get(2));
 				
+		textFieldTitle.setText(title);
 				htmlFieldProblem.setHtmlText(problem);
-				
+								htmlFieldSolution.setHtmlText(solution);
+
 				list.forEach(System.out::println);
 	}
 	
