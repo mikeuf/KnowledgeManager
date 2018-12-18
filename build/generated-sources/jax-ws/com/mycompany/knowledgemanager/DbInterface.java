@@ -42,18 +42,15 @@ public interface DbInterface {
 
     /**
      * 
-     * @param arg0
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "businessMethod", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethod")
-    @ResponseWrapper(localName = "businessMethodResponse", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethodResponse")
-    @Action(input = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodRequest", output = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodResponse")
-    public List<String> businessMethod(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+    @RequestWrapper(localName = "newArticle", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.NewArticle")
+    @ResponseWrapper(localName = "newArticleResponse", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.NewArticleResponse")
+    @Action(input = "http://knowledgemanager.mycompany.com/DbInterface/newArticleRequest", output = "http://knowledgemanager.mycompany.com/DbInterface/newArticleResponse")
+    public int newArticle();
 
     /**
      * 
@@ -69,5 +66,20 @@ public interface DbInterface {
     public boolean saveArticle(
         @WebParam(name = "arg0", targetNamespace = "")
         List<String> arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<java.lang.String>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "businessMethod", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethod")
+    @ResponseWrapper(localName = "businessMethodResponse", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.BusinessMethodResponse")
+    @Action(input = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodRequest", output = "http://knowledgemanager.mycompany.com/DbInterface/businessMethodResponse")
+    public List<String> businessMethod(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
 }

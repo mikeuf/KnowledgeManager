@@ -37,6 +37,8 @@ public class FXMLDocumentController implements Initializable {
 	private Button btnLoad;
 	@FXML
 	private Button btnSave;
+	@FXML
+	private Button btnNewArticle;
 
 	@FXML
 	private void handleBtnLoadAction(ActionEvent event) {
@@ -76,6 +78,19 @@ public class FXMLDocumentController implements Initializable {
 		System.out.println("I think I saved successfully.");
 	}
 	
+	@FXML
+	private void handleBtnNewAction(ActionEvent event) {
+		
+		// find an article id that hasn't been used yet
+		int newArticleId = newArticle() + 1;
+		System.out.println("The next article ID is " + newArticleId);
+		textFieldArticleId.setText(Integer.toString(newArticleId));
+		textFieldTitle.clear();
+		htmlFieldProblem.setHtmlText("");
+		htmlFieldSolution.setHtmlText("");
+		
+	}
+	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		// TODO
@@ -97,6 +112,14 @@ public class FXMLDocumentController implements Initializable {
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.saveArticle(arg0);
 	}
+
+	private static int newArticle() {
+		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
+		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
+		return port.newArticle();
+	}
+
+
 
 
 

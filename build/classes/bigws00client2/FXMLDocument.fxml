@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="1174.0" prefWidth="1113.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="bigws00client2.FXMLDocumentController">
     <children>
-        <Button fx:id="btnLoad" layoutX="35.0" layoutY="36.0" onAction="#handleBtnLoadAction" text="Load Article" />
+        <Button fx:id="btnLoad" layoutX="165.0" layoutY="36.0" onAction="#handleBtnLoadAction" text="Load Article" />
         <Label fx:id="label" layoutX="36.0" layoutY="280.0" minHeight="16" minWidth="69" text="Problem" />
       <HTMLEditor fx:id="htmlFieldProblem" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="36.0" layoutY="311.0" prefHeight="347.0" prefWidth="1036.0" />
       <TextField fx:id="textFieldArticleId" layoutX="35.0" layoutY="149.0" />
@@ -17,6 +17,7 @@
       <HTMLEditor fx:id="htmlFieldSolution" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="35.0" layoutY="723.0" prefHeight="411.0" prefWidth="1043.0" />
       <Label layoutX="36.0" layoutY="695.0" text="Solution" />
       <Label layoutX="40.0" layoutY="114.0" text="Article ID" />
-      <Button fx:id="btnSave" layoutX="144.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleBtnSaveAction" text="Save Article" />
+      <Button fx:id="btnSave" layoutX="292.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleBtnSaveAction" text="Save Article" />
+      <Button fx:id="btnNewArticle" layoutX="39.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleBtnNewAction" text="New Article" />
     </children>
 </AnchorPane>
