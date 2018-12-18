@@ -6,6 +6,7 @@
 package bigws00client2;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -61,7 +62,18 @@ public class FXMLDocumentController implements Initializable {
 	
 	@FXML
 	private void handleBtnSaveAction(ActionEvent event) {
-		System.out.println("You clicked Save!");
+		
+		List<String> list = new ArrayList<String>();
+		list.add(textFieldArticleId.getText());
+		list.add(textFieldTitle.getText());
+		list.add(htmlFieldProblem.getHtmlText());
+		list.add(htmlFieldSolution.getHtmlText());
+		
+		if (!saveArticle(list)) {
+			System.out.println("There was a problem saving the article.");
+		}
+		
+		System.out.println("I think I saved successfully.");
 	}
 	
 	@Override
@@ -78,6 +90,12 @@ public class FXMLDocumentController implements Initializable {
 		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.businessMethod(arg0);
+	}
+
+	private static boolean saveArticle(java.util.List<java.lang.String> arg0) {
+		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
+		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
+		return port.saveArticle(arg0);
 	}
 
 

@@ -55,4 +55,19 @@ public interface DbInterface {
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "saveArticle", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.SaveArticle")
+    @ResponseWrapper(localName = "saveArticleResponse", targetNamespace = "http://knowledgemanager.mycompany.com/", className = "com.mycompany.knowledgemanager.SaveArticleResponse")
+    @Action(input = "http://knowledgemanager.mycompany.com/DbInterface/saveArticleRequest", output = "http://knowledgemanager.mycompany.com/DbInterface/saveArticleResponse")
+    public boolean saveArticle(
+        @WebParam(name = "arg0", targetNamespace = "")
+        List<String> arg0);
+
 }

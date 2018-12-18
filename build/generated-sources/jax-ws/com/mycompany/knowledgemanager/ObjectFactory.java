@@ -24,10 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _SaveArticle_QNAME = new QName("http://knowledgemanager.mycompany.com/", "saveArticle");
     private final static QName _Hello_QNAME = new QName("http://knowledgemanager.mycompany.com/", "hello");
     private final static QName _BusinessMethodResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "businessMethodResponse");
     private final static QName _BusinessMethod_QNAME = new QName("http://knowledgemanager.mycompany.com/", "businessMethod");
     private final static QName _HelloResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "helloResponse");
+    private final static QName _SaveArticleResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "saveArticleResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.mycompany.knowledgemanager
@@ -53,6 +55,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SaveArticleResponse }
+     * 
+     */
+    public SaveArticleResponse createSaveArticleResponse() {
+        return new SaveArticleResponse();
+    }
+
+    /**
+     * Create an instance of {@link SaveArticle }
+     * 
+     */
+    public SaveArticle createSaveArticle() {
+        return new SaveArticle();
+    }
+
+    /**
      * Create an instance of {@link Hello }
      * 
      */
@@ -66,6 +84,15 @@ public class ObjectFactory {
      */
     public BusinessMethodResponse createBusinessMethodResponse() {
         return new BusinessMethodResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SaveArticle }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "saveArticle")
+    public JAXBElement<SaveArticle> createSaveArticle(SaveArticle value) {
+        return new JAXBElement<SaveArticle>(_SaveArticle_QNAME, SaveArticle.class, null, value);
     }
 
     /**
@@ -102,6 +129,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "helloResponse")
     public JAXBElement<HelloResponse> createHelloResponse(HelloResponse value) {
         return new JAXBElement<HelloResponse>(_HelloResponse_QNAME, HelloResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SaveArticleResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "saveArticleResponse")
+    public JAXBElement<SaveArticleResponse> createSaveArticleResponse(SaveArticleResponse value) {
+        return new JAXBElement<SaveArticleResponse>(_SaveArticleResponse_QNAME, SaveArticleResponse.class, null, value);
     }
 
 }

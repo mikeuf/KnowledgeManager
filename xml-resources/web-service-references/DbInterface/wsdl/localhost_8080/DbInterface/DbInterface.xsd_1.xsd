@@ -8,6 +8,10 @@
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
 
+<xs:element name="saveArticle" type="tns:saveArticle"/>
+
+<xs:element name="saveArticleResponse" type="tns:saveArticleResponse"/>
+
 <xs:complexType name="businessMethod">
 <xs:sequence>
 <xs:element name="arg0" type="xs:int"/>
@@ -17,6 +21,18 @@
 <xs:complexType name="businessMethodResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveArticle">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveArticleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
