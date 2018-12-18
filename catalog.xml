@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/BigWS00/PersonService?wsdl" uri="xml-resources/web-service-references/PersonService/wsdl/localhost_8080/BigWS00/PersonService.wsdl"/>
     <system systemId="http://localhost:8080/BigWS00/PersonService?xsd=1" uri="xml-resources/web-service-references/PersonService/wsdl/localhost_8080/BigWS00/PersonService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/DbInterface/DbInterface?wsdl" uri="xml-resources/web-service-references/DbInterface/wsdl/localhost_8080/DbInterface/DbInterface.wsdl"/>
+    <system systemId="http://localhost:8080/DbInterface/DbInterface?xsd=1" uri="xml-resources/web-service-references/DbInterface/wsdl/localhost_8080/DbInterface/DbInterface.xsd_1.xsd"/>
 </catalog>

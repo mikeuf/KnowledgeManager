@@ -11,7 +11,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -21,13 +23,18 @@ public class FXMLDocumentController implements Initializable {
 	
 	@FXML
 	private Label label;
+	@FXML
+	private Button button;
+	@FXML
+	private TextField fieldArticleId;
 	
 	@FXML
 	private void handleButtonAction(ActionEvent event) {
 		System.out.println("You clicked me!");
 		label.setText("Hello World!");
+		int articleId = Integer.parseInt(fieldArticleId.getText());
 		
-				List list = businessMethod();
+				List list = businessMethod(articleId);
 				list.forEach(System.out::println);
 	}
 	
@@ -36,10 +43,18 @@ public class FXMLDocumentController implements Initializable {
 		// TODO
 	}	
 
-	private static java.util.List<java.lang.Object> businessMethod() {
-		ws.PersonService_Service service = new ws.PersonService_Service();
-		ws.PersonService port = service.getPersonServicePort();
-		return port.businessMethod();
+	private static String hello(java.lang.String name) {
+		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
+		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
+		return port.hello(name);
 	}
+
+	private static java.util.List<java.lang.Object> businessMethod(int arg0) {
+		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
+		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
+		return port.businessMethod(arg0);
+	}
+
+
 	
 }

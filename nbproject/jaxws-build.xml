@@ -16,22 +16,22 @@
             <classpath path="${libs.jaxws21.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-client-PersonService" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonService"/>
-        <property name="wsdl-PersonService" location="xml-resources/web-service-references/PersonService/wsdl/localhost_8080/BigWS00/PersonService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonService" destdir="${build.generated.dir}/jax-wsCache/PersonService" wsdl="${wsdl-PersonService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/BigWS00/PersonService?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-PersonService}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/PersonService"/>
+    <target name="wsimport-client-DbInterface" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DbInterface"/>
+        <property name="wsdl-DbInterface" location="xml-resources/web-service-references/DbInterface/wsdl/localhost_8080/DbInterface/DbInterface.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DbInterface" destdir="${build.generated.dir}/jax-wsCache/DbInterface" wsdl="${wsdl-DbInterface}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DbInterface/DbInterface?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-DbInterface}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DbInterface"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/PersonService">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DbInterface">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-PersonService" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/PersonService"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+    <target name="wsimport-client-clean-DbInterface" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DbInterface"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/mycompany/knowledgemanager"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-PersonService"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-DbInterface"/>
 </project>
