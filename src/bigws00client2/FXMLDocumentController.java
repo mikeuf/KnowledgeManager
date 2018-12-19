@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,9 +23,7 @@ import javafx.scene.web.HTMLEditor;
  * @author cyclops
  */
 public class FXMLDocumentController implements Initializable {
-	
-	@FXML
-	private Label label;
+
 	@FXML
 	private HTMLEditor htmlFieldProblem;
 	@FXML
@@ -39,21 +38,21 @@ public class FXMLDocumentController implements Initializable {
 	private Button btnSave;
 	@FXML
 	private Button btnNewArticle;
+	@FXML
+	private Label label;
+	@FXML
+	private TextField textFieldLoadArticle;
 
 	@FXML
 	private void handleBtnLoadAction(ActionEvent event) {
-		System.out.println("You clicked me!");
-		label.setText("Hello World!");
+
 		int articleId = Integer.parseInt(textFieldArticleId.getText());
 		
 				List list = businessMethod(articleId);
 				String title = (String) list.get(1);
 				String problem = (String) list.get(2);
 					String solution = (String) list.get(3);
-				
-			//	StringBuilder problem = new StringBuilder();
-			//	problem.append(list.get(0));
-		//		String problem = list.get(2);   //Integer.toString((int) list.get(2));
+
 				
 		textFieldTitle.setText(title);
 				htmlFieldProblem.setHtmlText(problem);
@@ -121,11 +120,9 @@ public class FXMLDocumentController implements Initializable {
 
 
 
-
-
-	
-
-
-
+	private void exitApplication(ActionEvent event) {
+		Platform.exit();
+		System.exit(0);
+	}
 	
 }
