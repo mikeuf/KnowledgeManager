@@ -1,7 +1,7 @@
 # Knowledge Manager JavaFX Application with JAX-WS and SOAP
 This is the JavaFX desktop client for Knowledge Manager. It exchanges SOAP (Simple Object Access Protocol) requests with a JAX-WS (Java API for XML Web Services) web application server.
 
-The server portion can be found in this repository:
+The server portion can be found in this repository:<br />
 https://github.com/mikeuf/KnowledgeManagerServer
 
 ## Table of Contents
@@ -17,7 +17,7 @@ You may receive a message from your browser stating that the program is "not com
 ## Overview
 The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchanging SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
 
-Here is a link to the WSDL (Web Service Definition Language) file. 
+Here is a link to the WSDL (Web Service Definition Language) file.<br /> 
 http://178.128.148.167:8080/DbInterface/DbInterface?wsdl
 
 Clicking that link should open an XML file that defines the services available from the Knowledge Manager server. You don't have to do anything with it, but the client uses the information in the WSDL to understand how to interface with the server. If you are unable to access the WSDL link, it means that the server is probably offline. When the server is offline, the client will be unable to function.
