@@ -4,4 +4,6 @@
     <system systemId="http://localhost:8080/BigWS00/PersonService?xsd=1" uri="wsdl/localhost_8080/BigWS00/PersonService.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/DbInterface/DbInterface?wsdl" uri="wsdl/localhost_8080/DbInterface/DbInterface.wsdl"/>
     <system systemId="http://localhost:8080/DbInterface/DbInterface?xsd=1" uri="wsdl/localhost_8080/DbInterface/DbInterface.xsd_1.xsd"/>
+    <system systemId="http://178.128.148.167:8080/DbInterface/DbInterface?wsdl" uri="wsdl/178.128.148.167_8080/DbInterface/DbInterface.wsdl"/>
+    <system systemId="http://178.128.148.167:8080/DbInterface/DbInterface?xsd=1" uri="wsdl/178.128.148.167_8080/DbInterface/DbInterface.xsd_1.xsd"/>
 </catalog>

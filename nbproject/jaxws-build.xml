@@ -18,8 +18,8 @@
     </target>
     <target name="wsimport-client-DbInterface" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/DbInterface"/>
-        <property name="wsdl-DbInterface" location="xml-resources/web-service-references/DbInterface/wsdl/localhost_8080/DbInterface/DbInterface.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DbInterface" destdir="${build.generated.dir}/jax-wsCache/DbInterface" wsdl="${wsdl-DbInterface}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/DbInterface/DbInterface?wsdl" xnocompile="true" xendorsed="true">
+        <property name="wsdl-DbInterface" location="xml-resources/web-service-references/DbInterface/wsdl/178.128.148.167_8080/DbInterface/DbInterface.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DbInterface" destdir="${build.generated.dir}/jax-wsCache/DbInterface" wsdl="${wsdl-DbInterface}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://178.128.148.167:8080/DbInterface/DbInterface?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-DbInterface}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/DbInterface"/>
         </wsimport>

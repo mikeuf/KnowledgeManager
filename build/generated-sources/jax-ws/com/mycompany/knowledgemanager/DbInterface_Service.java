@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "DbInterface", targetNamespace = "http://knowledgemanager.mycompany.com/", wsdlLocation = "http://localhost:8080/DbInterface/DbInterface?wsdl")
+@WebServiceClient(name = "DbInterface", targetNamespace = "http://knowledgemanager.mycompany.com/", wsdlLocation = "http://178.128.148.167:8080/DbInterface/DbInterface?wsdl")
 public class DbInterface_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class DbInterface_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/DbInterface/DbInterface?wsdl");
+            url = new URL("http://178.128.148.167:8080/DbInterface/DbInterface?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
