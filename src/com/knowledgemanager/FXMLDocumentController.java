@@ -1,4 +1,4 @@
-package bigws00client2;
+package com.knowledgemanager;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -158,4 +158,6 @@ public class FXMLDocumentController implements Initializable {
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
 		return port.newArticle();
 	}
+	
+	
 }
