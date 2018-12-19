@@ -22,7 +22,7 @@ Clicking that link should open an XML file that defines the services available f
 **Note:** This application is intended to be a simple "proof-of-concept" rather than an example of robust engineering. There is only minimal form validation and exception handling. 
 
 ## Instructions
-When the client is started, the Article ID field will automatically increment to the next available article ID. If there are 6 exiting articles, it will start at number 7 (Figure 1).
+When the client is started, the Article ID field will automatically increment to the next available article ID. If there are 6 existing articles, it will start at number 7 (Figure 1).
 
 <br /><br />
 **Figure 1 - Blank Article**
