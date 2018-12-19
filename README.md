@@ -20,7 +20,14 @@ Clicking that link should open an XML file that defines the services available f
 
 **Note:** This application is intended to be a simple "proof-of-concept" rather than an example of robust engineering. There is only minimal form validation and exception handling. 
 
-The application does not have a search engine, but you can load an existing article by typing the number into the "Loading existing article by ID" field and clicking the Load button (Figure 4).
+When the client is started, the Article ID field will automatically increment to the next available article ID. If there are 6 exiting articles, it will start at number 7 (Figure 1).
+
+After adding the text, click the Save button to store the article on the server (Figure 2).
+
+The application does not have a search engine, but you can load an existing article by typing the number into the "Loading existing article by ID" field and clicking the Load button (Figure 3).
+
+Attempting to load a non-existent article will return an "Article not found" error (Figure 4).
+
 <br /><br />
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
