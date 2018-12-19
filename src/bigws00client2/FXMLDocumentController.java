@@ -42,13 +42,24 @@ public class FXMLDocumentController implements Initializable {
 	private Label label;
 	@FXML
 	private TextField textFieldLoadArticle;
+	@FXML
+	private Label labelLoadStatus;
 
 	@FXML
 	private void handleBtnLoadAction(ActionEvent event) {
 
 		int articleId = Integer.parseInt(textFieldLoadArticle.getText());
+		
+		if (articleId > newArticle()) {
+			labelLoadStatus.setText("Article not found");
+						labelLoadStatus.setVisible(true);
+						return;
+		} else {
+			labelLoadStatus.setVisible(false);
+		}
 
-		List list = businessMethod(articleId);
+		List list = loadArticle(articleId);
+		
 		String id = (String) list.get(0);
 		String title = (String) list.get(1);
 		String problem = (String) list.get(2);
@@ -62,6 +73,7 @@ public class FXMLDocumentController implements Initializable {
 
 	@FXML
 	private void handleBtnSaveAction(ActionEvent event) {
+		labelLoadStatus.setVisible(false);
 
 		List<String> list = new ArrayList<String>();
 		list.add(textFieldArticleId.getText());
@@ -69,13 +81,12 @@ public class FXMLDocumentController implements Initializable {
 		list.add(htmlFieldProblem.getHtmlText());
 		list.add(htmlFieldSolution.getHtmlText());
 
-		if (!saveArticle(list)) {
-			System.out.println("There was a problem saving the article.");
-		}
+		saveArticle(list);
 	}
 
 	@FXML
 	private void handleBtnNewAction(ActionEvent event) {
+		labelLoadStatus.setVisible(false);
 
 		// find an article id that hasn't been used yet
 		int newArticleId = newArticle() + 1;
@@ -92,22 +103,16 @@ public class FXMLDocumentController implements Initializable {
 		textFieldArticleId.setText(Integer.toString(newArticleId));
 	}
 
-	private static String hello(java.lang.String name) {
+	private static java.util.List<java.lang.String> loadArticle(int arg0) {
 		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
-		return port.hello(name);
+		return port.loadArticle(arg0);
 	}
 
-	private static java.util.List<java.lang.String> businessMethod(int arg0) {
+	private static void saveArticle(java.util.List<java.lang.String> arg0) {
 		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
 		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
-		return port.businessMethod(arg0);
-	}
-
-	private static boolean saveArticle(java.util.List<java.lang.String> arg0) {
-		com.mycompany.knowledgemanager.DbInterface_Service service = new com.mycompany.knowledgemanager.DbInterface_Service();
-		com.mycompany.knowledgemanager.DbInterface port = service.getDbInterfacePort();
-		return port.saveArticle(arg0);
+		port.saveArticle(arg0);
 	}
 
 	private static int newArticle() {
@@ -120,5 +125,8 @@ public class FXMLDocumentController implements Initializable {
 		Platform.exit();
 		System.exit(0);
 	}
+
+
+
 
 }

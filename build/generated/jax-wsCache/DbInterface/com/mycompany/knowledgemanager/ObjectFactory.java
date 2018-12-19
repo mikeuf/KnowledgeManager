@@ -25,12 +25,10 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _SaveArticle_QNAME = new QName("http://knowledgemanager.mycompany.com/", "saveArticle");
-    private final static QName _Hello_QNAME = new QName("http://knowledgemanager.mycompany.com/", "hello");
-    private final static QName _BusinessMethodResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "businessMethodResponse");
+    private final static QName _LoadArticle_QNAME = new QName("http://knowledgemanager.mycompany.com/", "loadArticle");
+    private final static QName _LoadArticleResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "loadArticleResponse");
     private final static QName _NewArticle_QNAME = new QName("http://knowledgemanager.mycompany.com/", "newArticle");
     private final static QName _NewArticleResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "newArticleResponse");
-    private final static QName _BusinessMethod_QNAME = new QName("http://knowledgemanager.mycompany.com/", "businessMethod");
-    private final static QName _HelloResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "helloResponse");
     private final static QName _SaveArticleResponse_QNAME = new QName("http://knowledgemanager.mycompany.com/", "saveArticleResponse");
 
     /**
@@ -38,14 +36,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link BusinessMethod }
-     * 
-     */
-    public BusinessMethod createBusinessMethod() {
-        return new BusinessMethod();
     }
 
     /**
@@ -57,19 +47,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HelloResponse }
-     * 
-     */
-    public HelloResponse createHelloResponse() {
-        return new HelloResponse();
-    }
-
-    /**
      * Create an instance of {@link SaveArticleResponse }
      * 
      */
     public SaveArticleResponse createSaveArticleResponse() {
         return new SaveArticleResponse();
+    }
+
+    /**
+     * Create an instance of {@link LoadArticle }
+     * 
+     */
+    public LoadArticle createLoadArticle() {
+        return new LoadArticle();
     }
 
     /**
@@ -81,11 +71,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Hello }
+     * Create an instance of {@link LoadArticleResponse }
      * 
      */
-    public Hello createHello() {
-        return new Hello();
+    public LoadArticleResponse createLoadArticleResponse() {
+        return new LoadArticleResponse();
     }
 
     /**
@@ -94,14 +84,6 @@ public class ObjectFactory {
      */
     public NewArticle createNewArticle() {
         return new NewArticle();
-    }
-
-    /**
-     * Create an instance of {@link BusinessMethodResponse }
-     * 
-     */
-    public BusinessMethodResponse createBusinessMethodResponse() {
-        return new BusinessMethodResponse();
     }
 
     /**
@@ -114,21 +96,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Hello }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoadArticle }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "hello")
-    public JAXBElement<Hello> createHello(Hello value) {
-        return new JAXBElement<Hello>(_Hello_QNAME, Hello.class, null, value);
+    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "loadArticle")
+    public JAXBElement<LoadArticle> createLoadArticle(LoadArticle value) {
+        return new JAXBElement<LoadArticle>(_LoadArticle_QNAME, LoadArticle.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BusinessMethodResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoadArticleResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "businessMethodResponse")
-    public JAXBElement<BusinessMethodResponse> createBusinessMethodResponse(BusinessMethodResponse value) {
-        return new JAXBElement<BusinessMethodResponse>(_BusinessMethodResponse_QNAME, BusinessMethodResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "loadArticleResponse")
+    public JAXBElement<LoadArticleResponse> createLoadArticleResponse(LoadArticleResponse value) {
+        return new JAXBElement<LoadArticleResponse>(_LoadArticleResponse_QNAME, LoadArticleResponse.class, null, value);
     }
 
     /**
@@ -147,24 +129,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "newArticleResponse")
     public JAXBElement<NewArticleResponse> createNewArticleResponse(NewArticleResponse value) {
         return new JAXBElement<NewArticleResponse>(_NewArticleResponse_QNAME, NewArticleResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BusinessMethod }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "businessMethod")
-    public JAXBElement<BusinessMethod> createBusinessMethod(BusinessMethod value) {
-        return new JAXBElement<BusinessMethod>(_BusinessMethod_QNAME, BusinessMethod.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HelloResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://knowledgemanager.mycompany.com/", name = "helloResponse")
-    public JAXBElement<HelloResponse> createHelloResponse(HelloResponse value) {
-        return new JAXBElement<HelloResponse>(_HelloResponse_QNAME, HelloResponse.class, null, value);
     }
 
     /**
