@@ -11,16 +11,9 @@ https://github.com/mikeuf/KnowledgeManagerClient/raw/master/dist/KnowledgeManage
 You may receive a message from your browser stating that the program is "not commonly downloaded and may be dangerous," or something to this effect. Your browser should give you the option to either discard or keep the file.
 
 ## Overview
-This program allows you to choose from the following sorting algorithms:
-* Bubble Sort
-* Selection Sort
-* Insertion Sort
-* Merge Sort
-* Quick Sort
+The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchange SOAP (Simple Object Access Protocol) requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
 
-Once numbers have been entered and a sort has been selected, SortController peforms a form validation check using regex. If the set passes the check, it is parsed into a list which is sent, by reference, to Library/Sorter.cs, which performs the actual algorithms. It also keeps track of each iteration so the user can see each step of the process.<br /><br />
-The results include an "Additional Details" section which displays more information about each algorithm, including runtime complexity and additional notes. These details are stored in a SQLite database.<br /><br />
-The data model is a combination of a DbSet of a SQLite table that is stored in an IEnumerable property, along with a few simple strings that are used to populate the views. The app also makes use of a partial view to maintain a consistent look without needless duplication of code.
+
 <br /><br />
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
