@@ -13,6 +13,11 @@ You may receive a message from your browser stating that the program is "not com
 ## Overview
 The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchange SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
 
+Here is a link to the WSDL (Web Service Definition Language) file. If you are unable to access this link, it means that the server is probably offline. When the server is offline, the client will be unable to function.
+http://178.128.148.167:8080/DbInterface/DbInterface?wsdl
+
+Clicking that link should open an XML file that defines the services available for Knowledge Manager. The client connects to the WSDL to interact with the server. 
+
 
 <br /><br />
 **Figure 1 - Blank Article**
