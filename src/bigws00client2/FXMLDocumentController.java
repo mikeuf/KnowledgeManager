@@ -15,10 +15,9 @@ import javafx.scene.web.HTMLEditor;
 /**
  * FXMLDocumentController.fxml
  *
- * This is the controller for the application form. It presents a set
- * of text fields into which the user can enter data to be saved to the
- * database. Alternatively, the user can load existing articles from the
- * database.
+ * This is the controller for the application form. It presents a set of text
+ * fields into which the user can enter data to be saved to the database.
+ * Alternatively, the user can load existing articles from the database.
  */
 public class FXMLDocumentController implements Initializable {
 
@@ -44,26 +43,28 @@ public class FXMLDocumentController implements Initializable {
 	private Label labelLoadStatus;
 
 	/**
-	 * When the user clicks Load, the entered article id is selected
-	 * from the database. The text fields are updated with the article data.
-	 * 
-	 * @param The button click event handler 
+	 * When the user clicks Load, the entered article id is selected from the
+	 * database. The text fields are updated with the article data.
+	 *
+	 * @param The button click event handler
 	 */
 	@FXML
 	private void handleBtnLoadAction(ActionEvent event) {
 
 		int articleId = Integer.parseInt(textFieldLoadArticle.getText());
-		
+
+		// Checks to see if the article number actually exists
 		if (articleId > newArticle()) {
 			labelLoadStatus.setText("Article not found");
-						labelLoadStatus.setVisible(true);
-						return;
+			labelLoadStatus.setVisible(true);
+			return;
 		} else {
 			labelLoadStatus.setVisible(false);
 		}
 
+		// retrieve the article fields from the database
 		List list = loadArticle(articleId);
-		
+
 		String id = (String) list.get(0);
 		String title = (String) list.get(1);
 		String problem = (String) list.get(2);
@@ -78,13 +79,14 @@ public class FXMLDocumentController implements Initializable {
 	/**
 	 * When the user clicks Save, the currently-entered content is saved to the
 	 * database for that article.
-	 * 
-	 * @param The button click event handler 
+	 *
+	 * @param The button click event handler
 	 */
 	@FXML
 	private void handleBtnSaveAction(ActionEvent event) {
 		labelLoadStatus.setVisible(false);
 
+		// populate a new list with the text content and save it to the database.
 		List<String> list = new ArrayList<String>();
 		list.add(textFieldArticleId.getText());
 		list.add(textFieldTitle.getText());
@@ -94,30 +96,28 @@ public class FXMLDocumentController implements Initializable {
 		saveArticle(list);
 	}
 
-		/**
-	 * When the user clicks New, the text fields are cleared and the Article ID
-	 * is set to the next available number. 
-	 * 
-	 * @param The button click event handler 
+	/**
+	 * When the user clicks New, the text fields are cleared and the Article ID is
+	 * set to the next available number.
+	 *
+	 * @param The button click event handler
 	 */
 	@FXML
 	private void handleBtnNewAction(ActionEvent event) {
 		labelLoadStatus.setVisible(false);
 
-		// find an article id that hasn't been used yet
+		// determine the next available article id that hasn't been used yet
 		int newArticleId = newArticle() + 1;
 		textFieldArticleId.setText(Integer.toString(newArticleId));
+		
+		// clear the text fields
 		textFieldTitle.clear();
 		htmlFieldProblem.setHtmlText("");
 		htmlFieldSolution.setHtmlText("");
-
 	}
 
 	/**
 	 * Automatically sets the article ID to the next available number.
-	 * 
-	 * @param url
-	 * @param rb 
 	 */
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
