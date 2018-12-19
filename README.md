@@ -11,14 +11,12 @@ https://github.com/mikeuf/KnowledgeManagerClient/raw/master/dist/KnowledgeManage
 You may receive a message from your browser stating that the program is "not commonly downloaded and may be dangerous," or something to this effect. Your browser should give you the option to either discard or keep the file.
 
 ## Overview
-The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchange SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
+The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchanging SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
 
 Here is a link to the WSDL (Web Service Definition Language) file. If you are unable to access this link, it means that the server is probably offline. When the server is offline, the client will be unable to function.
 http://178.128.148.167:8080/DbInterface/DbInterface?wsdl
 
-Clicking that link should open an XML file that defines the services available for Knowledge Manager. The client connects to the WSDL to interact with the server. 
-
-
+Clicking that link should open an XML file that defines the services available from the Knowledge Manager server. The client uses the information in the WSDL to understand how to interface with the server. 
 <br /><br />
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
