@@ -28,12 +28,12 @@ When the client is started, the Article ID field will automatically increment to
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
 
-After adding the text, click the Save button to store the article on the server (Figure 2).
+After adding the text, click the "Save Article" button to store the article on the server (Figure 2).
 <br /><br />
 **Figure 2 - After Creating a New Article**
 ![After Creating New Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/2-first-article-loaded.png "After Creating New Article")
 
-The application does not have a search engine, but you can load an existing article by typing the number into the "Loading existing article by ID" field and clicking the Load button (Figure 3).
+The application does not have a search engine, but you can load an existing article by typing the number into the "Loading existing article by ID" field and clicking the "Load" button (Figure 3).
 <br /><br />
 **Figure 3 - Loading an Existing Article**
 ![Loading Existing Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/3-second-article-loaded.png "Loading Existing Article")
