@@ -1,5 +1,5 @@
 # Knowledge Manager Client
-This is the JavaFX desktop client for Knowledge Manager. It exchanges SOAP (Simple Object Access Protocol) requests with a JAX-WS web application server.
+This is the JavaFX desktop client for Knowledge Manager. It exchanges SOAP (Simple Object Access Protocol) requests with a JAX-WS (Java API for XML Web Services) web application server.
 
 ## Table of Contents
 **[How to Run this Program](#how-to-run-this-program)**  
