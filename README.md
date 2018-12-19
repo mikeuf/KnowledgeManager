@@ -1,5 +1,5 @@
 # Knowledge Manager Client
-This is the desktop client that connects to a JAX-WS web application called Knowledge Manager. 
+This is the JavaFX desktop client for Knowledge Manager. It exchanges SOAP (Simple Object Access Protocol) requests with a JAX-WS web application server.
 
 ## Table of Contents
 **[How to Run this Program](#how-to-run-this-program)**  
@@ -11,7 +11,7 @@ https://github.com/mikeuf/KnowledgeManagerClient/raw/master/dist/KnowledgeManage
 You may receive a message from your browser stating that the program is "not commonly downloaded and may be dangerous," or something to this effect. Your browser should give you the option to either discard or keep the file.
 
 ## Overview
-The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchange SOAP (Simple Object Access Protocol) requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
+The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchange SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
 
 
 <br /><br />
