@@ -17,6 +17,10 @@ Here is a link to the WSDL (Web Service Definition Language) file. If you are un
 http://178.128.148.167:8080/DbInterface/DbInterface?wsdl
 
 Clicking that link should open an XML file that defines the services available from the Knowledge Manager server. The client uses the information in the WSDL to understand how to interface with the server. 
+
+**Note:** This application is intended to be a simple "proof-of-concept" rather than an example of robust engineering. There is only minimal form validation and exception handling. 
+
+The application does not have a search engine, but you can load an existing article by typing the number into the "Loading existing article by ID" field and clicking the Load button (Figure 4).
 <br /><br />
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
