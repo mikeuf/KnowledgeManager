@@ -22,8 +22,8 @@ Once numbers have been entered and a sort has been selected, SortController pefo
 The results include an "Additional Details" section which displays more information about each algorithm, including runtime complexity and additional notes. These details are stored in a SQLite database.<br /><br />
 The data model is a combination of a DbSet of a SQLite table that is stored in an IEnumerable property, along with a few simple strings that are used to populate the views. The app also makes use of a partial view to maintain a consistent look without needless duplication of code.
 <br /><br />
-**Figure 1 - Insertion Sort**
-![Insertion Sort](https://github.com/mikeuf/sorting-algorithms-asp/blob/master/1-insertion-sort.jpg "Insertion Sort")
+**Figure 1 - Blank Article**
+![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
 <br /><br />
-**Figure 2 - Validation Error**
-![Validation Error](https://github.com/mikeuf/sorting-algorithms-asp/blob/master/2-validation-error.jpg "Validation Error")
+**Figure 2 - After Creating New Article**
+![After Creating New Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/2-first-article-loaded.png "After Creating New Article")
