@@ -25,5 +25,11 @@ The data model is a combination of a DbSet of a SQLite table that is stored in a
 **Figure 1 - Blank Article**
 ![Blank Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Blank Article")
 <br /><br />
-**Figure 2 - After Creating New Article**
+**Figure 2 - After Creating a New Article**
 ![After Creating New Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/2-first-article-loaded.png "After Creating New Article")
+<br /><br />
+**Figure 3 - Loading an Existing Article**
+![Loading Existing Article](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/1-blank-article.png "Loading Existing Article")
+<br /><br />
+**Figure 4 - Article Not Found**
+![Article Not Found](https://github.com/mikeuf/KnowledgeManagerClient/raw/master/screenshots/2-first-article-loaded.png "Article Not Found")
