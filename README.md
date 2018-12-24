@@ -17,7 +17,7 @@ You may receive a message from your browser stating that the program is "not com
 Here is a link to the WSDL (Web Service Definition Language) file.<br /> 
 http://178.128.148.167:8080/DbInterface/DbInterface?wsdl
 
-If you are unable to access the WSDL link, it means that the server is currently offline. When the server is offline, the client will be unable to function. Clicking that link should open an XML file that defines the services available from the Knowledge Manager server. You don't have to do anything with it, but the client uses the information in the WSDL to understand how to interface with the server. 
+If you are unable to access the WSDL link, it means that the server is currently offline or the port is blocked in your environment and the client will be unable to function. Clicking that link should open an XML file that defines the services available from the Knowledge Manager server. You don't have to do anything with it, but the client uses the information in the WSDL to understand how to interface with the server. 
 
 ## Overview
 The Knowledge Manager client allows the user to create, update, save and reload technical articles by exchanging SOAP requests with a JAX-WS web application server. In this case, the server is Oracle Glassfish running on CentOS. The database is mySQL.
